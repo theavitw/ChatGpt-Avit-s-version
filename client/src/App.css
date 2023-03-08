@@ -1,0 +1,136 @@
+.App {
+  text-align: center;
+  display: flex;
+  background-color: #282c34;
+  color: white !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  
+}
+.sidemenu {
+  background-color: #202123;
+  width: 250px;
+ 
+  /* border : 1px solid white; */
+}
+.chatbox {
+  background-color: #343541;
+  flex: 1;
+  /* border: 1px solid white; */
+  position: relative;
+  overflow: auto;
+}
+.new-chat {
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.147);
+  border-radius: 6px;
+  margin: 10px;
+  text-align: left;
+  font-size: small;
+}
+.new-chat:hover {
+  background-color: rgba(255, 255, 255, 0.092);
+  transition: 0.1s ease-in;
+}
+.new-chat span {
+  padding-right: 10px;
+  font-size: large;
+}
+.sidemenu hr {
+  flex: 1;
+  margin-top: 20rem;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.285);
+  height: 1px;
+}
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+.textarea {
+  
+  background-color: #40414f;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  text-decoration: none;
+  color: white;
+  width: 90%;
+  /* font-size: 1.10em; */
+  resize: none;
+  padding: 15px;
+  
+
+}
+.textarea-div {
+ 
+  padding: 30px;
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.chat-log {
+
+  padding: 24px;
+  text-align: left;
+}
+.chat-msg.chatgpt {
+  background-color: #ffffff3a;
+  padding: 10px;
+}
+.chat-msg {
+  
+  padding: 10px;
+}
+.area {
+  /* border: 10px solid rgb(0, 0, 0); */
+  
+  padding-left: 24px;
+  padding-right: 24px;
+  
+  text-align: left;
+  margin-left: 4rem;
+  height:auto;
+  max-width: 480px;
+  display: flex;
+}
+.avatar {
+  background: rgb(255, 255, 255); 
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  
+}
+.avatar {
+  background: rgb(255, 255, 255); 
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  
+}
+.avatar-msg{
+  padding-left: 2rem;
+}
+.avatar.chatgpt {
+  /* border: 1px solid rgb(255, 15, 15); */
+  background: #10a37f;    
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+.svg{
+  position : absolute;
+  padding: 19px; 
+ 
+}
