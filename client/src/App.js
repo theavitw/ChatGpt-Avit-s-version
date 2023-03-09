@@ -22,19 +22,20 @@ function App() {
     let newchat =[...chat,{user : "me",message : `${input}`}]    
 
     setinput("");
-    send(newchat  )
+    send(newchat)
     // fatch response to the api the chat log array of messages and sending
     // the message to localhost:3000 as a post request
     const messages = newchat.map((message) => message.message).join("\n");
-    const response = await fetch("http://localhost:3080/", { 
+    console.log(messages);
+    const response = await fetch("http://localhost:3050/", { 
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ message : messages })
+      body: JSON.stringify({ message: messages })
   });
-  const data = await response.json();
-  send([...newchat,{user : "chatgpt",message : `${data.message}`}])
+  const data = await  response.json();
+  send([...newchat, { user: "chatgpt", message: `${data.message}` }])
   document.getElementsByClassName("chatbox").scrollTop = document.getElementsByClassName("chatbox").scrollHeight 
 
 }

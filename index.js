@@ -5,22 +5,21 @@ const cors = require("cors");
 const { Configuration, OpenAIApi } = require("openai");
 const configuration = new Configuration({
   organization: "org-5t9StBDqT2h1Bw2Ogz3EVg77",
-  apiKey: "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",
+  apiKey: "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",
 });
 
 const openai = new OpenAIApi(configuration);
 
-// can you plz add corse here
+
 
 const app = express();
 app.use(bodyparser.json());
 app.use(cors());
 
-const port = 3080;
+const port = 3050;
 
 app.post("/", async (req, res) => {
   const { message } = req.body;
-  console.log(message,"message")
   console.log(message);
   const response = await openai.createCompletion({
     model: "text-davinci-003",
@@ -31,6 +30,7 @@ app.post("/", async (req, res) => {
 
   res.json({
     message: response.data.choices[0].text,
+    
   });
 });
 app.listen(port, () => {

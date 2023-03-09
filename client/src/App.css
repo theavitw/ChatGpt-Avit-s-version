@@ -73,9 +73,9 @@
 
 }
 .textarea-div {
- 
+  margin-top: 80vh;
   padding: 30px;
-  position: sticky;
+  position : sticky;
   bottom: 0;
   left: 0;
   right: 0;
